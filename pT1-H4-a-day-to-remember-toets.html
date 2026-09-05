@@ -91,15 +91,15 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
 </header>
 <div class="sticky"><div class="bar">
   <button class="btn-check" id="btnCheck">✓ Controleer</button><button class="btn-reset" id="btnReset">Opnieuw</button>
-  <div class="scorebox">Score <span class="n" id="liveN">0</span>/6</div>
-  <div class="progress"><div class="track"><div class="fill" id="fill"></div></div><div class="lbl" id="progLbl">0 van 6</div></div>
+  <div class="scorebox">Score <span class="n" id="liveN">0</span>/7</div>
+  <div class="progress"><div class="track"><div class="fill" id="fill"></div></div><div class="lbl" id="progLbl">0 van 7</div></div>
 </div></div>
 <div id="quiz"></div>
 <div id="summary"><h2>Resultaat</h2><div id="feedback"></div><div class="big" id="bigScore"></div></div>
 <p style="margin-top:22px"><a class="link solid" href="pT1-H4-a-day-to-remember-theorie.html">📖 Terug naar de theorie</a></p>
 </div>
 <script>
-const QUESTIONS=[{"q": "Choose the correct sentence.", "opts": ["She were at home.", "She was at home.", "She beed at home.", "She is at home."], "ans": 1, "exp": "Simple past van to be: she → was (niet were)."}, {"q": "Fill in: Yesterday I ___ (walk) to school.", "opts": ["walks", "walked", "walk", "walking"], "ans": 1, "exp": "Verleden tijd + -ed: walked."}, {"q": "Choose the correct negative.", "opts": ["I didn't played.", "I didn't play.", "I not played.", "I no play."], "ans": 1, "exp": "didn't + werkwoord zónder -ed: I didn't play."}, {"q": "Wat is 'the fourth'?", "opts": ["de eerste", "de tweede", "de derde", "de vierde"], "ans": 3, "exp": "fourth = de vierde (first, second, third, fourth...)."}, {"q": "My birthday is ___ 8 May.", "opts": ["at", "in", "on", "of"], "ans": 2, "exp": "Bij een datum gebruik je on: on 8 May."}, {"q": "Lees: 'Last weekend we visited my grandma. We were happy. It was her birthday. We didn't eat at home — we went to a restaurant.' Wat deden ze in het weekend?", "opts": ["They stayed at home.", "They visited grandma and went to a restaurant.", "They were sad.", "They played football."], "ans": 1, "exp": "In de tekst: visited grandma + went to a restaurant."}];const letters=["A","B","C","D"];const N=QUESTIONS.length;
+const QUESTIONS=[{"q": "Fill in: We don't go to school ___ Pancake Day.", "opts": ["at", "on", "in", "of"], "ans": 1, "exp": "Bij een dag of datum gebruik je on: on Pancake Day."}, {"q": "Fill in: She was born ___ Belgium.", "opts": ["on", "at", "in", "by"], "ans": 2, "exp": "Bij een land of stad gebruik je in: in Belgium."}, {"q": "Fill in: The Highland Games finish ___ 9 p.m.", "opts": ["in", "at", "on", "by"], "ans": 1, "exp": "Bij een uur gebruik je at: at 9 p.m."}, {"q": "Wat is 'the fourth'?", "opts": ["de eerste", "de tweede", "de derde", "de vierde"], "ans": 3, "exp": "fourth = de vierde (first, second, third, fourth ...)."}, {"q": "Hoe schrijf je de datum 10 juni 2026 in het Brits Engels?", "opts": ["June 10, 2026", "10 June 2026", "2026 June 10", "10/2026 June"], "ans": 1, "exp": "Brits Engels = dag + maand + jaar: 10 June 2026."}, {"q": "Op welke datum vieren we Halloween?", "opts": ["25 December", "14 February", "31 October", "1 April"], "ans": 2, "exp": "Halloween = 31 October."}, {"q": "Vul in: Thanksgiving is celebrated ___ the fourth Thursday ___ November.", "opts": ["on / of", "at / in", "in / on", "on / in"], "ans": 0, "exp": "dagexpressie met on (on the fourth Thursday) + maand met in (in November)."}];const letters=["A","B","C","D"];const N=QUESTIONS.length;
 function el(t,c,x){const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e;}
 const quiz=document.getElementById("quiz");
 QUESTIONS.forEach((Q,qi)=>{const div=el("div","q");div.dataset.i=qi;
