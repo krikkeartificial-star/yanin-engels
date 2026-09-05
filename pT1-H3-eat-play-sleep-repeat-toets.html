@@ -91,15 +91,15 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
 </header>
 <div class="sticky"><div class="bar">
   <button class="btn-check" id="btnCheck">✓ Controleer</button><button class="btn-reset" id="btnReset">Opnieuw</button>
-  <div class="scorebox">Score <span class="n" id="liveN">0</span>/6</div>
-  <div class="progress"><div class="track"><div class="fill" id="fill"></div></div><div class="lbl" id="progLbl">0 van 6</div></div>
+  <div class="scorebox">Score <span class="n" id="liveN">0</span>/7</div>
+  <div class="progress"><div class="track"><div class="fill" id="fill"></div></div><div class="lbl" id="progLbl">0 van 7</div></div>
 </div></div>
 <div id="quiz"></div>
 <div id="summary"><h2>Resultaat</h2><div id="feedback"></div><div class="big" id="bigScore"></div></div>
 <p style="margin-top:22px"><a class="link solid" href="pT1-H3-eat-play-sleep-repeat-theorie.html">📖 Terug naar de theorie</a></p>
 </div>
 <script>
-const QUESTIONS=[{"q": "Choose the correct sentence.", "opts": ["He play football.", "He plays football.", "He playing football.", "He played football."], "ans": 1, "exp": "Present simple met he/she/it: play → plays."}, {"q": "Fill in: ___ she like pizza?", "opts": ["Do", "Does", "Is", "Are"], "ans": 1, "exp": "she → does + werkwoord zónder -s."}, {"q": "Choose the correct negative.", "opts": ["I don't like coffee.", "I doesn't like coffee.", "I no like coffee.", "I not like coffee."], "ans": 0, "exp": "I → don't + werkwoord: I don't like coffee."}, {"q": "She ___ walks to school. (100%)", "opts": ["never", "often", "always", "sometimes"], "ans": 2, "exp": "100% = always (altijd)."}, {"q": "Wat betekent 'to get up'?", "opts": ["gaan slapen", "opstaan", "ontbijten", "naar school gaan"], "ans": 1, "exp": "get up = opstaan."}, {"q": "Tom: 'I usually get up at 7 and have breakfast. I never eat sweets before school.' Wat doet Tom voor school?", "opts": ["He always eats sweets.", "He gets up at 7 and eats breakfast.", "He never has breakfast.", "He gets up at 8."], "ans": 1, "exp": "In de tekst: get up at 7 + have breakfast; never geldt voor sweets."}];const letters=["A","B","C","D"];const N=QUESTIONS.length;
+const QUESTIONS=[{"q": "Choose the correct sentence.", "opts": ["He play football.", "He plays football.", "He playing football.", "He played football."], "ans": 1, "exp": "Present simple met he/she/it: play → plays."}, {"q": "Fill in: ___ she like tennis?", "opts": ["Do", "Does", "Is", "Are"], "ans": 1, "exp": "she → does + werkwoord zonder -s."}, {"q": "Choose the negative: She ___ eat meat.", "opts": ["don't", "doesn't", "not", "isn't"], "ans": 1, "exp": "she → doesn't + werkwoord (zonder -s)."}, {"q": "Fill in: My brother always ___ the cat downstairs.", "opts": ["carry", "carrys", "carries", "carryes"], "ans": 2, "exp": "Medeklinker + -y → -ies: carry → carries."}, {"q": "Hoe vaak? He is ___ late for school (100%).", "opts": ["never", "sometimes", "usually", "always"], "ans": 3, "exp": "100% = always; bij to be komt het frequentiewoord er ná (is always late)."}, {"q": "Fill in: I enjoy ___ in the morning.", "opts": ["jog", "to jog", "jogging", "jogged"], "ans": 2, "exp": "Na enjoy gebruik je de -ing-vorm (gerund): enjoy jogging."}, {"q": "Wat betekent 'to get up'?", "opts": ["gaan slapen", "opstaan", "ontbijten", "naar school gaan"], "ans": 1, "exp": "get up = opstaan."}];const letters=["A","B","C","D"];const N=QUESTIONS.length;
 function el(t,c,x){const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e;}
 const quiz=document.getElementById("quiz");
 QUESTIONS.forEach((Q,qi)=>{const div=el("div","q");div.dataset.i=qi;
